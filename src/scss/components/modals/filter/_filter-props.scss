@@ -1,0 +1,127 @@
+.filter-props {
+  padding: 0 13px;
+
+  &__slider {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    position: relative;
+
+    p {
+      margin-bottom: 53px;
+      font-weight: 400;
+    }
+
+    .props-value {
+      position: absolute;
+      bottom: -15px;
+      font-size: .75rem;
+  
+      &__min {
+        right: 0;
+      }
+      &__max {
+        left: 0;
+      }
+    }
+  }
+
+  .slider-item {
+
+    &.noUi {
+      &-target {
+        border: none;
+        position: relative;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::after, &::before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          top: -3px;
+          border-radius: 50%;
+          background-color: $clr-primary;
+        }
+
+        &::before {
+          left: 0;
+        }
+        &::after {
+          right: 0;
+        }
+      }
+
+      &-horizontal {
+        height: 2px;
+
+        .noUi-handle {
+          top: -12px;
+        }
+      }
+    }
+
+    .noUi {
+      // line between handles
+      &-connect {
+        background-color: $clr-primary;
+      }
+
+      // tooltip
+      &-tooltip {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: $clr-primary;
+      }
+
+      // handles
+      &-handle {
+        border: 2px solid $clr-light;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        right: -12px;
+        box-shadow: none;
+        cursor: pointer;
+        background-color: $clr-primary;
+
+        &::before, &::after {
+          display: none;
+        }
+
+        &:focus-visible {
+          outline: transparent;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 20px;
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      
+      .filter-type__item {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .875rem;
+      }
+    }
+  }
+
+  &__rose-wind {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,73 @@
+.modal {
+  &__item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    z-index: 6;
+    transform: translateX(530px);
+    transition: transform .5s;
+
+    &.m-visible {
+      transform: translateX(0);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #001124;
+    opacity: .75;
+  }
+
+  &__body {
+    z-index: 1;
+    padding-right: 250px;
+    padding-top: 75px;
+    padding-left: 25px;
+    height: 100%;
+    min-width: 530px;
+    max-width: 530px;
+    overflow-y: scroll;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: none;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: $clr-light;
+    transition: background-color .2s;
+    z-index: 1;
+
+    svg {
+      fill: transparent;
+      pointer-events: none;
+
+      .btn-times {
+        fill: $clr-black;
+      }
+    }
+
+    &:active {
+      background-color: $clr-primary;
+    }
+
+    &:active, &:focus, &:hover {
+      outline: none;
+    }
+  }
+
+  &__container {
+    color: $clr-light;
+  }
+}

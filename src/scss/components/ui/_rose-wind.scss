@@ -1,0 +1,17 @@
+.rose-wind {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+      text, path {
+        fill: $clr-light;
+
+        &.colored {
+          fill: $clr-primary;
+        }
+      }
+    }
+  }
+}

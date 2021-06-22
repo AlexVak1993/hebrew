@@ -1,0 +1,42 @@
+.filter {
+  &__apply-clear {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+
+    .filter {
+      &__apply, &__clear {
+        padding: 9px;
+        font-size: 1rem;
+        border: 2px solid transparent;
+        cursor: pointer;
+        font-family: $font-main;
+        font-size: 0.875rem;
+      }
+      
+      &__apply {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: $clr-primary;
+        color: $clr-light;
+        transition: border .2s;
+
+        &:active {
+          border: 2px solid $clr-light;
+        }
+      }
+      
+      &__clear {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        background-color: $clr-light;
+        color: $clr-primary;
+        transition: border .2s;
+
+        &:active {
+          border: 2px solid $clr-primary;
+        }
+      }
+    }
+  }
+}

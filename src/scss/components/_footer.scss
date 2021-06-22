@@ -1,0 +1,21 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  padding: 30px 15px;
+
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon-wrap {
+    margin-left: 12px;
+  }
+
+  p {
+    margin-left: 5px;
+  }
+}

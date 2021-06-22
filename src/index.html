@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="iw">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <link rel="stylesheet" href="css/nouislider.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="page__wrapper">
+
+    <!-- --------background place-------- -->
+    <div class="page__background">
+      <img load="lazy" src="images/background/bgi-h.jpg" alt="background">
+    </div>
+    <div class="page__overlay"></div>
+    <!-- --------background place-------- -->
+
+    <div class="page__content">
+      <!-- --------header place-------- -->
+      @@include('./html-templates/_header.html',{})
+      <!-- --------header place-------- -->
+
+      <!-- ---------left-side menu--------- -->
+      <div class="side-menu">
+
+        <button class="side-menu__user-btn">
+          <div class="user-btn-wrap">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <g>
+                <g>
+                  <path
+                    d="M255.999,0c-74.443,0-135,60.557-135,135s60.557,135,135,135s135-60.557,135-135S330.442,0,255.999,0z" />
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path d="M478.48,398.68C438.124,338.138,370.579,302,297.835,302h-83.672c-72.744,0-140.288,36.138-180.644,96.68l-2.52,3.779V512
+              h450h0.001V402.459L478.48,398.68z" />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </button>
+
+        <div class="side-menu__inner-box">
+
+          <img src="images/background/drawer.svg" alt="">
+
+          @@include('./html-templates/_side-menu-btns.html',{})
+        </div>
+      </div>
+      <!-- ---------left-side menu--------- -->
+
+      <!-- ------------modal------------ -->
+      @@include('./html-templates/_modals.html',{})
+      <!-- ------------modal------------ -->
+
+    <!-- -------------footer------------- -->
+    @@include('./html-templates/_footer.html',{})
+    <!-- -------------footer------------- -->
+    </div>
+
+    <!-- ---------popup--------- -->
+    @@include('./html-templates/_popup.html',{})
+    <!-- ---------popup--------- -->
+  </div>
+
+  <!-- range sliders js lib -->
+  <script src="js/nouislider.js"></script>
+  <!-- wNumb - formattier for numbers in sliders -->
+  <script src="js/wNumb.js"></script>
+  <!-- custom js -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

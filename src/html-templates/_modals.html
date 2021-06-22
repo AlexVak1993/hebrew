@@ -1,0 +1,40 @@
+<div class="modal">
+  <!-- -----modal with appartment screen----- -->
+  <div class="modal__item" data-modal='appartment-view'>
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+      <button class="modal__close" data-close='close'>
+        @@include('./icon/close-btn.html',{})
+      </button>
+
+      @@include('./_modal-appartment.html',{})
+    </div>
+  </div>
+  <!-- -----modal with appartment screen----- -->
+
+  <!-- -----modal with favorite screen----- -->
+  <div class="modal__item" data-modal='favorite'>
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+      <button class="modal__close" data-close='close'>
+        @@include('./icon/close-btn.html',{})
+      </button>
+
+      @@include('./_modal-favorite.html',{})
+    </div>
+  </div>
+  <!-- -----modal with favorite screen----- -->
+  
+  <!-- ------modal with filter------ -->
+  <div class="modal__item" data-modal='filter'>
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+      <button class="modal__close" data-close='close'>
+        @@include('./icon/close-btn.html',{})
+      </button>
+      
+      @@include('./_modal-filter.html',{})
+    </div>
+  </div>
+  <!-- ------modal with filter------ -->
+</div>

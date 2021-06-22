@@ -1,0 +1,87 @@
+.side-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 7;
+
+  &__inner-box {
+    margin-left: auto;
+    height: 100%;
+    text-align: right;
+
+    img {
+      min-height: 100%;
+      width: auto;
+      min-width: 250px;
+      height: 1300px;
+      object-fit: cover;
+      text-align: right;
+    }
+  }
+
+  &__user-btn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    border: 2px solid $clr-light;
+    border-radius: 50%;
+    background: transparent;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border .2s;
+
+    .user-btn-wrap {
+      pointer-events: none;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $clr-light;
+        transition: fill .2s;
+      }
+    }
+
+    &:active {
+      border: 2px solid $clr-primary;
+
+      svg {
+        fill: $clr-primary;
+      }
+    }
+
+    &:active, &:focus, &:hover {
+      outline: none;
+    }
+  }
+
+  &__buttons-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__view-changer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__divider {
+    width: 70%;
+    margin: 0 auto;
+    border-top: 1px solid #1C6BC9;
+    border-bottom: 1px solid #FFFFFF20;
+  }
+}

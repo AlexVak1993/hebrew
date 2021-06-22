@@ -1,0 +1,65 @@
+.filter-number {
+  position: relative;
+  width: 94%;
+  margin-left: auto;
+
+  &__input {
+    width: 100%;
+    padding: 8px 16px 8px 60px;
+    border: 2px solid $clr-primary;
+    border-radius: 20px;
+    background-color: transparent;
+    color: $clr-light;
+    font-size: 1rem;
+    opacity: .6;
+    transition: .3s;
+
+    &+.filter-number__btn {
+      opacity: .6;
+      transition: .3s;
+    }
+
+    &::placeholder {
+      color: $clr-light;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    &:active, &:focus, &:hover {
+      outline: none;
+      opacity: 1;
+
+      &+.filter-number__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    height: 78%;
+    width: 50px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    background-color: $clr-primary;
+    transition: background-color .2s;
+
+    svg {
+      fill: $clr-light;
+    }
+
+    &:focus, &:hover, &:active {
+      outline: none;
+    }
+
+    &:active {
+      background-color: darken($clr-primary, 12);
+    }
+  }
+}

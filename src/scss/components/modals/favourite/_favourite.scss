@@ -1,0 +1,125 @@
+.favourite {
+  &__header {
+    margin-bottom: 75px;
+  }
+
+  &__remove-btn {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 1.125rem;
+    background-color: transparent;
+
+    svg {
+      fill: $clr-light;
+      transition: fill .2s;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:active {
+      svg {
+        fill: $clr-primary;
+      }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $clr-primary;
+    }
+
+    .favourite__remove-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+
+      svg {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__content {
+    padding-left: 25px;
+
+    .favourite-content {
+      &__appart-number {
+        margin-bottom: 15px;
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+
+      &__price {
+        display: flex;
+        align-items: center;
+        font-size: .875rem;
+
+        svg {
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+          fill: $clr-light;
+        }
+      }
+
+      &__price-value {
+        font-size: 2.675rem;
+        font-weight: 300;
+      }
+
+      &__square {
+        font-size: .875rem;
+      }
+    }
+  }
+
+  &__clear-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 15px 40px;
+      border: 1px solid $clr-light;
+      border-radius: 32px;
+      font-family: $font-main;
+      font-size: 1.125rem;
+      background-color: $clr-primary;
+      color: $clr-light;
+      cursor: pointer;
+      transition: all .2s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        outline: none;
+      }
+
+      &:active {
+        background-color: $clr-light;
+        color: $clr-primary;
+        border: 1px solid $clr-primary;
+      }
+    }
+  }
+}

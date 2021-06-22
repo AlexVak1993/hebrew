@@ -1,0 +1,76 @@
+.menu-button {
+
+  &__item {
+    max-width: 155px;
+    padding: 8px 16px;
+    margin: 10px 0;
+    position: relative;
+    border: transparent;
+    background-color: transparent;
+    color: $clr-light;
+    font-family: $font-main;
+    font-size: 1rem;
+    transition: color .3s;
+    cursor: pointer;
+
+    &.active, &:active {
+      color: $clr-black;
+      svg {
+        fill: $clr-black;
+      }
+      &:after {
+        background-color: $clr-black;
+      }
+    }
+
+    &:active, &:focus, &:hover {
+      outline: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: 0;
+      bottom: 10%;
+      height: 80%;
+      width: 4px;
+      background-color: transparent;
+      transition: background-color .3s;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    margin-bottom: 8px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $clr-light;
+      transition: fill .3s;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C10019;
+    color: $clr-light;
+    border-radius: 50%;
+    border: 2px solid $clr-light;
+    font-size: 12px;
+    transform: translateY(-50%) translateX(-100%);
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  &>:focus {
+    outline: 0;
+  }
+}
+
+html {
+  font-family: $font-main;
+  background-color: rgba(0,13,27,0.59);
+}
+
+body {
+  color: $clr-light;
+  font-size: $font-size;
+}
+
+button, input, span, label, p {
+  -webkit-tap-highlight-color: transparent;
+}

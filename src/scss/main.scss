@@ -1,0 +1,30 @@
+@import "media-mixins";
+@import "variables.scss";
+
+@import "fonts.scss";
+
+@import "common";
+
+@import "components/containers";
+@import "components/footer";
+@import "components/popup";
+
+@import "components/side-menu/side-menu";
+@import "components/side-menu/menu-btns";
+
+@import "components/header/header";
+@import "components/header/switcher";
+
+@import "components/ui/rose-wind";
+@import "components/ui/apply-clear-btns";
+
+@import "components/modals/modal-open";
+@import "components/modals/modal-accordion";
+
+@import "components/modals/appartment/appartment";
+
+@import "components/modals/favourite/favourite";
+
+@import "components/modals/filter/filter-number";
+@import "components/modals/filter/filter-type";
+@import "components/modals/filter/filter-props";

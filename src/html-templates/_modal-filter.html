@@ -1,0 +1,26 @@
+<div class="modal-body__container">
+  <h2 class="modal-body__header" dir="rtl">סנן לפי</h2>
+  <div class="modal-body__accordion v1">
+    <!-- accordion item filter-number -->
+    <div class="a-container">
+      <p class="a-btn" dir="rtl">מספר דירה <span></span></p>
+      <div class="a-panel">
+        @@include('./filter/_filter-number.html',{})
+      </div>
+    </div>
+    <!-- accordion item filter-type -->
+    <div class="a-container">
+      <p class="a-btn" dir="rtl">סוג דירה <span></span></p>
+      <div class="a-panel">
+        @@include('./filter/_filter-type.html',{})
+      </div>
+    </div>
+    <!-- accordion item filter-properties -->
+    <div class="a-container">
+      <p class="a-btn" dir="rtl">פרטי דירה <span></span></p>
+      <div class="a-panel">
+        @@include('./filter/_filter-props.html',{})
+      </div>
+    </div>
+  </div>
+</div>

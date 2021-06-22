@@ -1,0 +1,65 @@
+/* Customize the label (the container) */
+.filter-type {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+
+  &__item {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .875rem;
+    user-select: none;
+    text-align: center;
+  
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+  }
+  
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .filter-type__checkmark {
+      background-color: $clr-primary;
+      border-color: $clr-light;
+    }
+
+    &:checked ~ .filter-type__checkmark:after {
+      display: block;
+    }
+  }
+  
+  &__checkmark {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $clr-primary;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: .3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    width: 100%;
+    bottom: -45px;
+  }
+}

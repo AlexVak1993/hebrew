@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  margin-right: 265px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    max-width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__name {
+    margin-left: 265px;
+    padding: 16px 20px 16px 45px;
+    width: max-content;
+    max-width: 500px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: $clr-primary;
+      z-index: -1;
+    }
+
+    &::before {
+      clip-path: polygon(58% 0%, 100% 0, 100% 100%, 0% 100%);
+      left: 0;
+      width: 100px;
+    }
+
+    &::after {
+      right: 0;
+      width: 80%;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+      // clip-path: circle(50% at 50% 50%);
+    }
+
+    svg {
+      margin-left: 20px;
+    }
+  }
+}
